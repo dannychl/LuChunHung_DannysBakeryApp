@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:background="#FFFFFF"
+    android:id="@+id/Product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/bookingHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/dannybakeryheader" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivApptBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/accountwelcome"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintTop_toBottomOf="@id/ivApptBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineContact1"
+           />
+
+        <ImageView
+            android:id="@+id/ivDefaultImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/defaultimage"
+            app:layout_constraintBottom_toBottomOf="@+id/ivApptBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivApptBackground" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/baloo"
+            android:text=""
+            android:textColor="#003E9B"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivApptBackground"
+            app:layout_constraintStart_toEndOf="@+id/ivDefaultImg"
+            app:layout_constraintTop_toTopOf="@+id/ivApptBackground" />
+
+        <ImageView
+            android:id="@+id/nextIconWlc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/ivApptBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivApptBackground"
+            android:layout_marginRight="15dp"
+            app:srcCompat="@drawable/nexticon" />
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/phonecall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divisionLineContact1"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineContact2"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="40dp"/>
+
+        <ImageView
+            android:id="@+id/divisionLineContact1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divisionlinebg"
+            app:layout_constraintTop_toBottomOf="@id/ivApptBackground"
+            app:layout_constraintBottom_toTopOf="@id/ivPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/divisionLineContact2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divisionlinebg"
+            app:layout_constraintTop_toBottomOf="@id/ivPhone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Contact Us"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintTop_toBottomOf="@id/divisionLineContact1"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineContact2"
+            app:layout_constraintStart_toEndOf="@id/ivPhone"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/nextIconContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitEnd"
+            app:layout_constraintTop_toBottomOf="@id/divisionLineContact1"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineContact2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/nexticon"/>
+
+        <ImageView
+            android:id="@+id/ivTransaction"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/transactionicon"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintStart_toStartOf="@id/ivPhone"
+            app:layout_constraintTop_toBottomOf="@id/divisionLineContact2"
+            app:layout_constraintEnd_toEndOf="@id/ivPhone"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineTransHis1"/>
+
+
+        <TextView
+            android:id="@+id/tvTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Transaction History"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/divisionLineContact2"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineTransHis1"
+            app:layout_constraintStart_toStartOf="@id/tvContact"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/divisionLineTransHis1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divisionlinebg"
+            app:layout_constraintTop_toBottomOf="@id/ivTransaction"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/nextIconTransHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toTopOf="@+id/divisionLineTransHis1"
+            app:layout_constraintTop_toBottomOf="@+id/divisionLineContact2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="15dp"
+            app:srcCompat="@drawable/nexticon" />
+
+        <ImageView
+            android:id="@+id/ivLogOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/defaultimage"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toBottomOf="@id/divisionLineTransHis1"
+            app:layout_constraintStart_toStartOf="@id/ivTransaction"
+            app:layout_constraintEnd_toEndOf="@id/ivTransaction"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineLogOut1"/>
+
+        <TextView
+            android:id="@+id/tvLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Log Out"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/divisionLineTransHis1"
+            app:layout_constraintBottom_toTopOf="@id/divisionLineLogOut1"
+            app:layout_constraintStart_toStartOf="@id/tvTransaction"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/divisionLineLogOut1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divisionlinebg"
+            app:layout_constraintTop_toBottomOf="@id/tvLogOut"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/nextIconLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toTopOf="@+id/divisionLineLogOut1"
+            app:layout_constraintTop_toBottomOf="@+id/divisionLineTransHis1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="15dp"
+            app:srcCompat="@drawable/nexticon" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/nextIconLogOut"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scaleType="fitEnd"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/ivLogOut"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/ivLogOut"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            app:srcCompat="@drawable/nexticon" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
+</FrameLayout>

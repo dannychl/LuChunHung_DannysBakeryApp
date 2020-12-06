@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivTransactionHisBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/transactionhisbg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+    android:id="@+id/tvTransactionOrderDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Date Ordered:"
+    android:textColor="#000000"
+        android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="@id/ivTransactionHisBg"
+    app:layout_constraintTop_toTopOf="@id/ivTransactionHisBg"
+    app:layout_constraintBottom_toBottomOf="@id/ivTransactionHisBg"
+    app:layout_constraintEnd_toEndOf="@id/ivTransactionHisBg"
+    app:layout_constraintVertical_bias="0.25"
+    app:layout_constraintHorizontal_bias="0.2"/>
+
+    <TextView
+        android:id="@+id/tvTransactionOrderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Ordered:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvTransactionOrderDate"
+        app:layout_constraintTop_toBottomOf="@id/tvTransactionOrderDate"
+        app:layout_constraintBottom_toBottomOf="@id/ivTransactionHisBg"
+        app:layout_constraintEnd_toEndOf="@id/tvTransactionOrderDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <TextView
+        android:id="@+id/tvTransactionTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@id/ivTransactionHisBg"
+        app:layout_constraintTop_toTopOf="@id/ivTransactionHisBg"
+        app:layout_constraintBottom_toBottomOf="@id/ivTransactionHisBg"
+        app:layout_constraintEnd_toEndOf="@id/ivTransactionHisBg"
+        app:layout_constraintVertical_bias="0.30"
+        app:layout_constraintHorizontal_bias="0.85"/>
+
+    <TextView
+        android:id="@+id/tvTransactionTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RM100.00"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@id/tvTransactionTotal"
+        app:layout_constraintTop_toTopOf="@id/ivTransactionHisBg"
+        app:layout_constraintBottom_toBottomOf="@id/ivTransactionHisBg"
+        app:layout_constraintEnd_toEndOf="@id/tvTransactionTotal"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divisionline"
+        app:layout_constraintTop_toBottomOf="@id/ivTransactionHisBg"
+        app:layout_constraintStart_toStartOf="@id/ivTransactionHisBg"
+        app:layout_constraintEnd_toEndOf="@id/ivTransactionHisBg"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/Product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fmODTransactionHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivOrderDetailsBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/orderdetailsbg" />
+
+
+                <ImageView
+                    android:id="@+id/ivDateOrdered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/date_timebg"
+                    app:layout_constraintEnd_toEndOf="@id/ivOrderDescriptionBg"
+                    app:layout_constraintHorizontal_bias="0.174"
+                    app:layout_constraintStart_toStartOf="@id/ivOrderDescriptionBg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDateTransactionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Ordered: "
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDateOrdered"
+                    app:layout_constraintStart_toStartOf="@id/ivDateOrdered"
+                    app:layout_constraintTop_toTopOf="@id/ivDateOrdered"
+                    app:layout_constraintVertical_bias="0.363" />
+
+                <ImageView
+                    android:id="@+id/ivTimeOrdered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/date_timebg"
+                    app:layout_constraintEnd_toEndOf="@id/ivDateOrdered"
+                    app:layout_constraintStart_toStartOf="@id/ivDateOrdered"
+                    app:layout_constraintTop_toBottomOf="@id/ivDateOrdered" />
+
+                <TextView
+                    android:id="@+id/tvTimeTransactionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Ordered: "
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintStart_toStartOf="@id/tvDateTransactionHistory"
+                    app:layout_constraintEnd_toEndOf="@id/tvDateTransactionHistory"
+                    app:layout_constraintBottom_toBottomOf="@id/ivTimeOrdered"
+                    app:layout_constraintTop_toTopOf="@id/ivTimeOrdered"
+                    app:layout_constraintVertical_bias="0.3" />
+
+                <ImageView
+                    android:id="@+id/ivPaymentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/date_timebg"
+                    app:layout_constraintEnd_toEndOf="@id/ivTimeOrdered"
+                    app:layout_constraintStart_toStartOf="@id/ivTimeOrdered"
+                    app:layout_constraintTop_toBottomOf="@id/ivTimeOrdered" />
+
+                <TextView
+                    android:id="@+id/tvPaymentTransactionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Type: "
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tvTimeTransactionHistory"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPaymentType"
+                    app:layout_constraintStart_toStartOf="@id/tvTimeTransactionHistory"
+                    app:layout_constraintTop_toTopOf="@id/ivPaymentType"
+                    app:layout_constraintVertical_bias="0.3" />
+
+
+                <ImageView
+                    android:id="@+id/ivOrderDescriptionBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/orderdescriptionsbg"
+                    app:layout_constraintBottom_toBottomOf="@id/ivOrderDetailsBg"
+                    app:layout_constraintEnd_toEndOf="@id/ivOrderDetailsBg"
+                    app:layout_constraintStart_toStartOf="@id/ivOrderDetailsBg"
+                    app:layout_constraintTop_toBottomOf="@id/ivPaymentType" />
+
+                <TextView
+                    android:id="@+id/tvOrderDescriptionsTransactionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/baloo"
+                    android:text="Order Descriptions"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="@id/ivOrderDescriptionBg"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="@id/ivOrderDescriptionBg"
+                    app:layout_constraintTop_toTopOf="@id/ivOrderDescriptionBg" />
+
+
+                <TextView
+                    android:id="@+id/tvOrderRMTransactionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:text="RM"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvOrderDescriptionsTransactionHistory"
+                    app:layout_constraintEnd_toEndOf="@id/ivOrderDescriptionBg"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toEndOf="@id/tvOrderDescriptionsTransactionHistory"
+                    app:layout_constraintTop_toTopOf="@id/tvOrderDescriptionsTransactionHistory" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_marginTop="300dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="210dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="520dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTotalPaymentODTransactionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Payment: "
+                    android:textSize="12dp"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.55"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvTotalPaymentODTransactionHistoryAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTotalPaymentODTransactionHistory"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toEndOf="@id/tvTotalPaymentODTransactionHistory"
+                    app:layout_constraintTop_toTopOf="@id/tvTotalPaymentODTransactionHistory" />
+
+
+                <TextView
+                    android:id="@+id/tvTotalPaymentDiscODTransactionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="Total Payment After Discount (6%): "
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="@id/tvTotalPaymentODTransactionHistory"
+                    app:layout_constraintHorizontal_bias="0.99"
+                    app:layout_constraintVertical_bias="0.4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotalPaymentODTransactionHistory" />
+
+                <TextView
+                    android:id="@+id/tvTotalPaymentDiscODTransactionHistoryAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="16dp"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTotalPaymentDiscODTransactionHistory"
+                    app:layout_constraintEnd_toEndOf="@+id/tvTotalPaymentODTransactionHistoryAmt"
+                    app:layout_constraintStart_toStartOf="@+id/tvTotalPaymentODTransactionHistoryAmt"
+                    app:layout_constraintTop_toTopOf="@id/tvTotalPaymentDiscODTransactionHistory" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

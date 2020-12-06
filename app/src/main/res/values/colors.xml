@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#003E9B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="reloadColor">#ffffff</color>
+    <color name="headerColor">#003E9B</color>
+    <color name="roundedCornerColor">#FF9A02</color>
+    <color name="favourite_love">#FF0000</color>
+
+</resources>

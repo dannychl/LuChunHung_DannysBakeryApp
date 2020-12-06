@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetails">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/Product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPaymentCartView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Order Placed"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:textColor="#FF9A02"
+            android:visibility="gone"
+            android:textSize="36sp" />
+
+        <RelativeLayout
+            android:id="@+id/containerImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:outlineAmbientShadowColor="#000000"
+            android:outlineSpotShadowColor="#000000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ivQrCode"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside">
+        </ImageButton>
+
+            <ImageView
+                android:id="@+id/expandedProductImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/ivQrCode2"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside">
+        </ImageButton>
+
+    <FrameLayout
+        android:id="@+id/fmOrderDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivOrderDetailsBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/orderdetailsbg" />
+
+            <ImageView
+                android:id="@+id/ivDateOrdered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/date_timebg"
+                app:layout_constraintEnd_toEndOf="@id/ivOrderDetailsBg"
+                app:layout_constraintStart_toStartOf="@id/ivOrderDetailsBg"
+                app:layout_constraintTop_toTopOf="@id/ivOrderDetailsBg" />
+
+            <TextView
+                android:id="@+id/tvDateOrdered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Ordered: "
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivDateOrdered"
+                app:layout_constraintEnd_toEndOf="@id/ivDateOrdered"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="@id/ivDateOrdered"
+                app:layout_constraintTop_toTopOf="@id/ivDateOrdered"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <ImageView
+                android:id="@+id/ivTimeOrdered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/date_timebg"
+                app:layout_constraintEnd_toEndOf="@id/ivDateOrdered"
+                app:layout_constraintStart_toStartOf="@id/ivDateOrdered"
+                app:layout_constraintTop_toBottomOf="@id/ivDateOrdered" />
+
+            <TextView
+                android:id="@+id/tvTimeOrdered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Ordered: "
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivTimeOrdered"
+                app:layout_constraintEnd_toEndOf="@id/ivTimeOrdered"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="@id/ivTimeOrdered"
+                app:layout_constraintTop_toTopOf="@id/ivTimeOrdered"
+                app:layout_constraintVertical_bias="0.3" />
+
+
+            <ImageView
+                android:id="@+id/ivOrderDescriptionBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivOrderDetailsBg"
+                android:background="@drawable/orderdescriptionsbg"
+                app:layout_constraintEnd_toEndOf="@id/ivOrderDetailsBg"
+                app:layout_constraintStart_toStartOf="@id/ivOrderDetailsBg"
+                app:layout_constraintTop_toBottomOf="@id/ivTimeOrdered" />
+
+            <TextView
+                android:id="@+id/tvOrderDescriptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/baloo"
+                android:text="Order Desccriptions"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@id/ivOrderDescriptionBg"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="@id/ivOrderDescriptionBg"
+                app:layout_constraintTop_toTopOf="@id/ivOrderDescriptionBg" />
+
+
+            <TextView
+                android:id="@+id/tvOrderRM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:text="RM"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvOrderDescriptions"
+                app:layout_constraintEnd_toEndOf="@id/ivOrderDescriptionBg"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@id/tvOrderDescriptions"
+                app:layout_constraintTop_toTopOf="@id/tvOrderDescriptions" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTotalPaymentOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Payment: "
+                android:textColor="#000000"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.55"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guideline"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <TextView
+                android:id="@+id/tvTotalPaymentOrderDetailsAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvTotalPaymentOrderDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.35"
+                app:layout_constraintStart_toEndOf="@id/tvTotalPaymentOrderDetails"
+                app:layout_constraintTop_toTopOf="@id/tvTotalPaymentOrderDetails" />
+
+
+            <TextView
+                android:id="@+id/tvTotalPaymentDiscOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="Total Payment After Discount (6%): "
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvTotalPaymentOrderDetails"
+                app:layout_constraintHorizontal_bias="0.99"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTotalPaymentOrderDetails"
+                app:layout_constraintVertical_bias="0.2" />
+
+            <TextView
+                android:id="@+id/tvTotalPaymentDiscOrderDetailsAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@id/tvTotalPaymentDiscOrderDetails"
+                app:layout_constraintEnd_toEndOf="@id/tvTotalPaymentOrderDetailsAmt"
+                app:layout_constraintStart_toStartOf="@id/tvTotalPaymentOrderDetailsAmt"
+                app:layout_constraintTop_toTopOf="@id/tvTotalPaymentDiscOrderDetails" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.80" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

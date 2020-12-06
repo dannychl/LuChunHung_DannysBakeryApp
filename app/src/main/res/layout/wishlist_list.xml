@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivProductWListBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/productlistbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProductWListImg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintTop_toTopOf="@id/ivProductWListBg"
+        app:layout_constraintEnd_toEndOf="@id/ivProductWListBg"
+        app:layout_constraintBottom_toBottomOf="@id/ivProductWListBg"
+        app:layout_constraintStart_toStartOf="@id/ivProductWListBg">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvProductWListName"
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:text="Chocolate Forest Cake"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProductWListBg"
+        app:layout_constraintEnd_toEndOf="@+id/ivProductWListBg"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintStart_toEndOf="@id/guidelineProductWList"
+        app:layout_constraintTop_toTopOf="@id/ivProductWListBg"></TextView>
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvWListRM"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="sans-serif-condensed-medium"-->
+    <!--        android:text="RM"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:textSize="22dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/tvDescriptionWListPrice"-->
+    <!--        app:layout_constraintHorizontal_bias="0.3"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/guidelineProductWList"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvProductWListName"></TextView>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvDescriptionWListPrice"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="sans-serif-condensed-medium"-->
+    <!--        android:text="58.00"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:textSize="22dp"-->
+    <!--        app:layout_constraintHorizontal_bias="0.15"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tvWListRM"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tvWListRM"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/tvWListRM" />-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineProductWList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35279804" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

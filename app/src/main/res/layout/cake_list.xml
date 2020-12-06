@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgCake"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#ffffff"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tvCakeName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="Red Velvet Cake"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCakeQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textSize="13sp"
+            android:text="Quantity: 10"/>
+
+            <TextView
+                android:id="@+id/tvCakePrice"
+                android:layout_width="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textColor="#000000"
+                android:text="RM 68.00"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

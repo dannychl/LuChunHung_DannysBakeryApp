@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navProduct"
+        android:icon="@drawable/cake"
+        android:title="@string/title_cakes" />
+
+    <item
+        android:id="@+id/navigationPayment"
+        android:icon="@drawable/ic_payment"
+        android:title="@string/title_payment" />
+
+    <item
+        android:id="@+id/navAccount"
+        android:icon="@drawable/ic_account"
+        android:title="@string/title_account" />
+
+</menu>

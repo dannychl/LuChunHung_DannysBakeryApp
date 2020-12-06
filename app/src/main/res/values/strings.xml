@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Danny\'s Bakery</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Danny\'s Bakery</string>
+    <string name="title_cakes">Cakes</string>
+    <string name="title_payment">Payment</string>
+    <string name="title_account">Account</string>
+    <string name="item_added">Item Added To Wish List</string>
+    <string name="item_removed">Item Removed From Wish List</string>
+</resources>

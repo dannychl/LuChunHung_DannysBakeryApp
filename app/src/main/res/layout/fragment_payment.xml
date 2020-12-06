@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductCartDetails">
+    <ImageView
+        android:id="@+id/bookingHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/dannybakeryheader"
+        android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/tvPaymentCartView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Cart Is Empty"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="130dp"
+            android:textStyle="bold"
+            android:textColor="#FF9A02"
+            android:textSize="36sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/orderDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:text="Order Details"
+            app:strokeWidth="6dp"
+            android:padding="10dp"
+            app:cornerRadius="8dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="@id/ivOrderDetailsBg"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintTop_toTopOf="@id/ivOrderDetailsBg"
+            app:layout_constraintBottom_toBottomOf="@id/ivOrderDetailsBg"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
+
+        <ImageView
+            android:id="@+id/ivOrderDetailsBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/subtotalbg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivNextOrderDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/orderDetails"
+            app:layout_constraintTop_toTopOf="@id/orderDetails"
+            app:layout_constraintBottom_toBottomOf="@id/orderDetails"
+            android:src="@drawable/nexticon"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="200dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivPaymentBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/paymentdetailsbg"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvOrderSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORDER SUMMARY"
+            android:fontFamily="@font/baloo"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvPaymentRM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RM"
+            android:fontFamily="@font/baloo"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/tvOrderSummary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvPaymentSubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtotal: "
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderSummary"
+            app:layout_constraintStart_toStartOf="@id/tvOrderSummary"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvSubtotalAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toEndOf="@id/tvPaymentSubtotal"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentRM"
+            app:layout_constraintEnd_toEndOf="@id/ivPaymentBg"/>
+
+        <TextView
+            android:id="@+id/tvPaymentDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Discount (6%): "
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tvPaymentSubtotal"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentSubtotal" />
+
+        <TextView
+            android:id="@+id/tvSubtotalDiscountAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            app:layout_constraintHorizontal_bias="0.999"
+            app:layout_constraintStart_toEndOf="@id/tvPaymentSubtotal"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtotalAmt"
+            app:layout_constraintEnd_toEndOf="@id/tvSubtotalAmt"/>
+
+        <TextView
+            android:id="@+id/totalPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Payment"
+            android:fontFamily="@font/baloo"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/tvPaymentDiscount"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentDiscount" />
+
+        <TextView
+            android:id="@+id/tvTotalPaymentAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            app:layout_constraintHorizontal_bias="0.999"
+            app:layout_constraintStart_toEndOf="@id/totalPayment"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtotalDiscountAmt"
+            app:layout_constraintEnd_toEndOf="@id/tvSubtotalDiscountAmt"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/placeOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivPaymentBg"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalPaymentAmt"
+            android:text="Place Order"
+            app:strokeWidth="6dp"
+            android:padding="10dp"
+            app:cornerRadius="8dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginEnd="20dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            app:layout_constraintEnd_toEndOf="@id/ivPaymentBg" />
+
+        <ImageView
+            android:id="@+id/ivSubtotalBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/subtotalbg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
